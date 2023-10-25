@@ -9,7 +9,7 @@ var URI = process.env.URI;
 
 const app = express();
 app.use(cors());
-
+app.use(express.static("build"));
 app.use(bodyParser.json());
 
 mongoose.connect(URI, {
